@@ -1,0 +1,58 @@
+<h2 mat-dialog-title>{{ isCreateForm() ? 'Create Book' : 'Edit Book' }}</h2>
+<mat-dialog-content>
+  <form [formGroup]="bookForm">
+    <small *ngIf="isCreateForm()" class="validation-label">*required and must have 13 digits</small>
+    <mat-form-field *ngIf="isCreateForm()">
+      <input matInput placeholder="ISBN" formControlName="isbn" required pattern="[0-9]*">
+      <mat-error>{{ getErrorMessage('isbn') }}</mat-error>
+
+    </mat-form-field>
+    <small class="validation-label">*required</small>
+    <mat-form-field>
+      <input matInput placeholder="Title" formControlName="title">
+      <mat-error>{{ getErrorMessage('title') }}</mat-error>
+
+    </mat-form-field>
+    <small class="validation-label">*required</small>
+    <mat-form-field>
+      <input matInput placeholder="Author" formControlName="author">
+      <mat-error>{{ getErrorMessage('author') }}</mat-error>
+
+    </mat-form-field>
+    <small class="validation-label">max 100 char</small>
+    <mat-form-field>
+      <input matInput placeholder="Publisher" formControlName="publisher">
+      <mat-error>{{ getErrorMessage('publisher') }}</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Publication Date" formControlName="publicationDate">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error>{{ getErrorMessage('publicationDate') }}</mat-error>
+    </mat-form-field>
+    <small class="validation-label">max 500 char</small>
+    <mat-form-field>
+      <input matInput placeholder="Genre" formControlName="genre">
+      <mat-error>{{ getErrorMessage('genre') }}</mat-error>
+
+    </mat-form-field>
+    <small class="validation-label">must be greater than 0</small>
+    <mat-form-field>
+      <input matInput placeholder="Page Count" formControlName="pageCount" pattern="[0-9]*">
+      <mat-error>{{ getErrorMessage('pageCount') }}</mat-error>
+
+    </mat-form-field>
+    <small class="validation-label">max 500 char</small>
+    <mat-form-field>
+      <input matInput placeholder="Description" formControlName="description">
+      <mat-error>{{ getErrorMessage('description') }}</mat-error>
+
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="null" [disabled]="!bookForm.valid" (click)="onSubmit()">{{ isCreateForm() ? 'Create' : 'Update' }}</button>
+  <button mat-button (click)="onCancel()">Cancel</button>
+</mat-dialog-actions>

@@ -1,0 +1,18 @@
+<p>
+  <mat-toolbar >
+    <span>Library</span>
+    <span class="spacer"></span>
+    <button (click)="onCreate()" class="create-button">Create</button>
+  </mat-toolbar>
+</p>
+
+<div>
+  <ag-grid-angular
+    #bookGrid
+    style="width: 100vw; height: 93vh;"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [rowData]="rowData$ | async"
+    [gridOptions]="gridOptions"
+  ></ag-grid-angular>
+</div>

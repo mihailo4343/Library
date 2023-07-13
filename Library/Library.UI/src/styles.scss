@@ -1,0 +1,223 @@
+@import "../node_modules/ag-grid-community/styles/ag-grid.css";
+@import "../node_modules/ag-grid-community/styles/ag-theme-alpine.css";
+@import '../node_modules/ngx-toastr/toastr.css';
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.context-menu {
+  position: fixed;
+  background-color: #fff;
+  padding: 5px;
+  z-index: 9999;
+}
+
+.context-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.context-menu li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.context-menu li:hover {
+  background-color: #eee;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #f2f2f2;
+}
+
+.action-button {
+  margin-right: 8px;
+  height: 30px;
+  width: 80px;
+  background-color: #3f51b5;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background-color: #303f9f;
+}
+
+.create-button {
+  height: 40px;
+  width: 120px;
+  background-color: #8089bf;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 4%;
+}
+
+.create-button:hover {
+  background-color: #303f9f;
+}
+
+.mat-toolbar {
+  height: 64px;
+  padding: 0 16px;
+  background-color: #3f51b5;
+}
+
+.spacer {
+  flex: 1;
+}
+
+
+mat-dialog-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+mat-dialog-content {
+  height: 100%;
+}
+dialog-form{
+  height: 100%;
+}
+
+mat-dialog-actions {
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+mat-dialog-actions button {
+  margin-right: 8px;
+}
+
+mat-dialog-actions button.mat-button {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+mat-dialog-actions button.mat-button:hover {
+  background-color: #303f9f;
+}
+
+
+.ag-theme-alpine {
+  --ag-foreground-color: #333;
+  --ag-background-color: #fff;
+  --ag-header-background-color: #3f51b5;
+  --ag-header-foreground-color: #fff;
+  --ag-border-color: #ccc;
+}
+
+:host {
+  display: block;
+  width: 400px;
+}
+
+h2.mat-dialog-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+mat-dialog-content {
+  padding-bottom: 16px;
+}
+
+mat-dialog-actions {
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+mat-dialog-actions button {
+  margin-right: 8px;
+}
+
+mat-dialog-actions button.mat-button {
+  background-color: #3f51b5;
+  color: #fff;
+}
+
+mat-dialog-actions button.mat-button:hover {
+  background-color: #303f9f;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+mat-form-field .mat-form-field-infix {
+  padding: 0 4px;
+}
+
+mat-form-field .mat-input-element {
+  background-color: #fff;
+  color: #333;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+mat-form-field.mat-focused .mat-input-element {
+  border-color: #3f51b5;
+}
+
+mat-form-field .mat-input-element::placeholder {
+  color: #999;
+}
+
+mat-error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+mat-form-field.mat-textarea {
+  textarea.mat-input-element {
+    height: 120px;
+    resize: vertical;
+  }
+}
+
+.form-error {
+  color: red;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.validation-label {
+  color: pink;
+  font-size: 12px;
+}
+
