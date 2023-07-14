@@ -1,0 +1,15 @@
+version: '3'
+services:
+  frontend:
+    build:
+      context: ./Library.UI
+      dockerfile: Dockerfile
+    ports:
+      - 4200:4200
+
+  backend:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - 7019:7019
